@@ -1,10 +1,24 @@
 <template>
-  <div>test</div>
-
+  <div style="display: flex; margin-bottom: 10%; flex-direction: column; align-items: center">
+    <div style="margin: 2%">
+      Background Removal Tool
+      <p style="margin: 2%; font-style: italic">
+        (Powered by
+        <a
+          href="https://www.remove.bg/"
+          target="_blank"
+          >remove.bg</a
+        >)
+      </p>
+      <hr>
+    </div>
+    <div style="margin: 2%">Remueve el fondo de tu imagen con un click!</div>
+  </div>
   <input
     type="file"
     name="remove"
     id="inputFile"
+    accept="image/*"
     @change="setFile()"
   />
   <button @click="removeBackground">Remove Background</button>
